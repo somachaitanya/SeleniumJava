@@ -14,6 +14,7 @@ public class LoginPage {
 		this.password = password;
 	}
 
+
 	public String getUserName() {
 		return userName;
 	}
