@@ -30,6 +30,7 @@ public class CarTest {
 				*/	
 		//DownCasting 
 		//BMW b1 = (BMW) new Car(); // ClassCastException
+		new Car();
 		
 		
 		
