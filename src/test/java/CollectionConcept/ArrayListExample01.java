@@ -22,7 +22,7 @@ public class ArrayListExample01 {
 		//an object of child class and reference is parent interface
 		//List<Integer> list = new ArrayList<Integer>();	
 		
-/*		ArrayList<Integer> aList = new ArrayList<Integer>();
+/*		ArrayList<Integer> aList = new ArrayList<Integer>(); //generic
 		aList.add(4);
 		aList.add(1);
 		aList.add(3);
