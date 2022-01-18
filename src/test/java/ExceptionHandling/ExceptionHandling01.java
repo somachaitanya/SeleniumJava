@@ -9,11 +9,12 @@ public class ExceptionHandling01 {
 			int c = 10 / 0;
 			System.out.println(c);
 			//you're reading some file - NullPointerException
-		}catch(ArithmeticException ex) {
+		}catch(Throwable ex) {
 			System.out.println(ex);
-		}catch(NullPointerException npe) {
-			System.out.println(npe);
 		}
+		/*
+		 * catch(NullPointerException npe) { System.out.println(npe); }
+		 */
 		
 		finally{
 			System.out.println("finally executed");

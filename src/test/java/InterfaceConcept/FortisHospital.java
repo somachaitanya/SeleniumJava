@@ -4,7 +4,7 @@ public class FortisHospital extends UNHO implements IndianMedicalBoard, USMedica
 
 	// we have to define the method while we are implementing them in the class
 	@Override
-	public void orthoServices() {
+	public void orthoServices() {    // method definition
 		// TODO Auto-generated method stub
 		System.out.println("FH -- orthoServices");
 

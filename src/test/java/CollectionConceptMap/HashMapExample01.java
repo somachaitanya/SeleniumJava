@@ -9,6 +9,8 @@ public class HashMapExample01 {
 		//hashmap always stores value in key value pairs
 		
 		 HashMap<Integer, String> languages = new HashMap<>();
+		 // key, value
+		
 		 
 		    languages.put(1, "Java");
 		    languages.put(2, "Python");
@@ -37,8 +39,10 @@ public class HashMapExample01 {
 		    
 		    
 		    HashMap<String, Employee> empDetails = new HashMap<>();
-		    empDetails.put("User1 Data", new Employee("Rutuja",25));
+		    empDetails.put("User1 Data", new Employee("Ankita",25));
 		    empDetails.put("User2 Data", e);
+		    
+		    
 		    
 		    
 		    

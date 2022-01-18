@@ -5,7 +5,7 @@ public class CarDesign {
 	String name;
 	int price;
 	String color;
-	static final int wheels = 4;
+	static final int wheels = 4;  // initialization and instantiation
 	
 	// constant messages = User Created Successfully.
 	static final String accountCreationSuccessMsg = "User Created Successfully.";
