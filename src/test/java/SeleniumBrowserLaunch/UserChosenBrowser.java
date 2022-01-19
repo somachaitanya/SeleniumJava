@@ -9,12 +9,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UserChosenBrowser {
 
-	static WebDriver driver;
+	// static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		String browserName = "Edge MS";
+		WebDriver driver = null;
+		String browserName = "chrome";
 
 		if (browserName.toLowerCase().equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -22,18 +23,26 @@ public class UserChosenBrowser {
 		} else if (browserName.toLowerCase().equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else  if (browserName.toLowerCase().equals("edge")) {
+		} else if (browserName.toLowerCase().equals("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else
+		} else {
 			System.out.println("undefined browser");
-
+			System.exit(0);
+		}
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		driver.get("https://www.makemytrip.com/");
-		
+
 		String title = driver.getTitle();
 		System.out.println(title);
+		//driver.close();
+		driver.quit();
+		
+		driver= new ChromeDriver();
+		driver.get("https://www.google.com");
+		driver.getCurrentUrl(); //https://www.makemytrip.com/
+		System.out.println("End of the program."+driver.getCurrentUrl());
 		driver.close();
 	}
 
