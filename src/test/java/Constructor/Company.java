@@ -28,6 +28,7 @@ public class Company {
 		this.empCount = empCount;
 	}
 	
+	
 	public String getCompName() {
 		return name;
 	}

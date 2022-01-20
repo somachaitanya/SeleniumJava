@@ -23,7 +23,7 @@ public class LocatorsConcept {
 		//
 		//find the webElement and then we can perform action (click, sendkeys, hover)
 		//find the element, we will be using locators
-		//1.id
+		//1.id  - are always unique
 		
 		/*
 		 * driver.findElement(By.id("input-email")).sendKeys("chaitanya@gmail.com");
@@ -66,15 +66,47 @@ public class LocatorsConcept {
 		/*By email = By.id("input-email");
 		 doSendKeys(email, "Nikhil@gmail.com");*/
 		 //doSendKeys(pass, "Nikhil@3");
-		 * //doSendKeys(userName, "Vaibhav"); //driver.close(); br.closeBrowser();
-		 */
+		  //doSendKeys(userName, "Vaibhav"); //driver.close(); br.closeBrowser();
+		 
 		
-		//2. name
+		//2. name - unique 
 		//driver.findElement(By.name("email")).sendKeys("Chaitanya");
 		//driver.findElement(By.name("password")).sendKeys("Chaitanya@123");
 		
 		//By email = By.name("email");
 		
+		//3. className - not recommended at all, when class in not duplicate
+		
+		//driver.findElement(By.className("form-control")).sendKeys("Stephen@gmail.com");
+		//4. xpath - this is a locator not an attribute
+		
+		//driver.findElement(By.xpath("//input[@class='form-control']")).sendKeys("pass@123");
+		String text = driver.findElement(By.tagName("a")).getText();
+		System.out.println("The text is : "+text);
+		
+		//driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("Buddha@gmail.com");
+		//driver.findElement(By.xpath("//*[@id=\"input-password\"]")).sendKeys("buddha@123");
+		// 
+		
+		//5. css Selector 
+		//driver.findElement(By.cssSelector("#input-email")).sendKeys("test@gmail.com");
+		//driver.findElement(By.cssSelector("#input-password")).sendKeys("pass@123");
+		
+		//6 linkText - this will be used when we're having any link on our webpage <a>
+		
+		//driver.findElement(By.linkText("Register")).click();
+		
+		//7. partialLinkText
+		
+		//driver.findElement(By.partialLinkText("Recurring")).click();
+		
+		//8. tagName
+		//By h2Field = By.tagName("h2");
+	//	String h2Text = driver.findElement(By.tagName("h2")).getText();
+		//System.out.println(h2Text);
+		
+	//	String str = doGetText(h2Field);
+	//	System.out.println(str);
 		
 		
 	}
@@ -97,6 +129,11 @@ public class LocatorsConcept {
 		System.out.println("Finding the element using locator : "+locator);
 		System.out.println("Sending the value : "+value);
 		getElement(locator).sendKeys(value);
+	}
+	
+	public static String doGetText(By locator) {
+		System.out.println("The text of the element is :");
+		return getElement(locator).getText();
 	}
 }
 //Bhavna - 5, Chaitanya- 5, Deepika-5, Stephen-5, Madhu-5, Naresh-5, Nikhil-5, Preeti-5, Swati - 5

@@ -11,29 +11,35 @@ public class BrowserUtils {
 	
 	WebDriver driver;
 	
-	public void launchBrowser(String browserName) {
+	public WebDriver launchBrowser(String browserName) {
 		System.out.println("Launching the browser : "+browserName);
 		
 		switch(browserName) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			break;
 			
 		case "firefox":
 			WebDriverManager.chromedriver().setup();
 			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
 			break;
 			
 		case "edge":
 			WebDriverManager.chromedriver().setup();
 			driver = new EdgeDriver();
+			driver.manage().window().maximize();
 			break;
 			
 		default:
 			System.err.println("Browser is not found..."+browserName);
 			break;
 		}
+		
+		return driver;
+		
 	}
 
 
