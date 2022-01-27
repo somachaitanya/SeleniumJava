@@ -51,5 +51,6 @@ public class AmazonLinks {
 			
 		}
 	}
+	
 //NOTE: url!=null && !url.isEmpty()
 }
