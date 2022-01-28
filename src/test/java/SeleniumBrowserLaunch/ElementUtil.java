@@ -5,14 +5,17 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class ElementUtil {
 
 	WebDriver driver;
+	private Actions action;
 
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
+		action = new Actions(this.driver);
 	}
 
 	public WebElement getElement(By locator) {
@@ -92,6 +95,23 @@ public class ElementUtil {
 				break;
 			}
 		}
+	}
+	
+	//Actions class
+	public void doMoveToElement(By locator) {
+		System.out.println("Moving element using actions class");
+		action.moveToElement(getElement(locator)).perform();
+	}
+	
+	
+	public void doActionClick(By locator) {
+		System.out.println("Clicking element using the action class");
+		action.click(getElement(locator)).perform();
+	}
+	
+	public void doActionSendKeys(By locator, String keys) {
+		System.out.println("Sending data to input field using action class");
+		action.sendKeys(getElement(locator),keys).perform();
 	}
 
 }
