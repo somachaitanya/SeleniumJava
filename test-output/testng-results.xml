@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-31T16:23:45 IST" name="Default suite" finished-at="2022-01-31T16:23:45 IST" duration-ms="37">
+    <groups>
+    </groups>
+    <test started-at="2022-01-31T16:23:45 IST" name="Default test" finished-at="2022-01-31T16:23:45 IST" duration-ms="37">
+      <class name="SeleniumBrowserLaunch.TestngConcept">
+        <test-method signature="available()[pri:0, instance:SeleniumBrowserLaunch.TestngConcept@27ff5d15]" started-at="2022-01-31T16:23:45 IST" name="available" finished-at="2022-01-31T16:23:45 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- available -->
+        <test-method signature="display()[pri:0, instance:SeleniumBrowserLaunch.TestngConcept@27ff5d15]" started-at="2022-01-31T16:23:45 IST" name="display" finished-at="2022-01-31T16:23:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- display -->
+        <test-method signature="show()[pri:0, instance:SeleniumBrowserLaunch.TestngConcept@27ff5d15]" started-at="2022-01-31T16:23:45 IST" name="show" finished-at="2022-01-31T16:23:45 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- show -->
+      </class> <!-- SeleniumBrowserLaunch.TestngConcept -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
