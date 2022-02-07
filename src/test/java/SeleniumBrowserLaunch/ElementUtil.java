@@ -2,11 +2,14 @@ package SeleniumBrowserLaunch;
 
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementUtil {
 
@@ -114,4 +117,28 @@ public class ElementUtil {
 		action.sendKeys(getElement(locator),keys).perform();
 	}
 
+	// WebDriverWait utility
+	public WebElement waitForElementPresent(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	}
+	
+	public Alert waitForAlertPresent(int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);	
+		return  wait.until(ExpectedConditions.alertIsPresent());
+	}
+	
+	public String getAlertTextUsingWDW(int timeout) {
+		String alertText = waitForAlertPresent(timeout).getText();
+		acceptAlert(timeout);
+		return alertText;
+	}
+
+	public void acceptAlert(int timeout) {
+		waitForAlertPresent(timeout).accept();
+	}
+	
+	public void dismisAlert(int timeout) {
+		waitForAlertPresent(timeout).dismiss();
+	}
 }
