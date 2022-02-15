@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Testing testNG file(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="expectedTitle" value="Amazon.com. Spend less. Smile more."/>
+    <parameter name="url" value="https://demo.opencart.com/index.php?route=account/login"/>
+    <classes>
+      <class name="TestNGConcept.DataProviderConcept">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="userLogin" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- TestNGConcept.DataProviderConcept -->
+    </classes>
+  </test> <!-- Testing testNG file(failed) -->
+</suite> <!-- Failed suite [Suite] -->

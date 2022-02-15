@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Learn Selenium Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test XML File(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://amazon.com"/>
+    <classes>
+      <class name="TestNGConcept.AmazonTest">
+        <methods>
+          <include name="logoTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="titleTest"/>
+          <include name="urlTest"/>
+        </methods>
+      </class> <!-- TestNGConcept.AmazonTest -->
+    </classes>
+  </test> <!-- Test XML File(failed) -->
+</suite> <!-- Failed suite [Learn Selenium Suite] -->

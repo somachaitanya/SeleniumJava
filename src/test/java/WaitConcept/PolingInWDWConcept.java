@@ -31,10 +31,11 @@ public class PolingInWDWConcept {
 		if(wait.until(ExpectedConditions.titleContains("CDE"))) {
 			System.out.println(driver.getTitle());
 		}
-		
-		
+			
 		
 	}
+	
+	//fluent wait
 	
 
 }
