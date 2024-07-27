@@ -7,7 +7,7 @@ public class AllNamesInArray {
 	public static void main(String[] args) {
 
 		//Cntrl+Shift+O	
-		System.out.println("Please enter the number of people");
+		System.out.println("Please enter the number of peoples");
 		Scanner input = new Scanner(System.in);
 		int totalPpl	= input.nextInt();
 		
